@@ -70,7 +70,7 @@ module Receipts
 
       def footer
         move_down 45
-        text company.fetch(:name), inline_format: true
+        text "<strong>#{company.fetch(:name)}</strong>", inline_format: true
         text "<color rgb='888888'>#{company.fetch(:address)}</color>", inline_format: true
       end
   end
