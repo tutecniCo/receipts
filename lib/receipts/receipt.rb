@@ -22,7 +22,7 @@ module Receipts
     private
 
       def default_message
-        "Hemos recibido el pago por #{attributes.fetch(:product)}. Puedes mantener este recibo para tus propios registros. Por preguntas, puedes contactarnos a <color rgb='326d92'><link href='mailto:#{company.fetch(:email)}?subject=tutecniCo - Servicio #{id}'><b>#{company.fetch(:email)}</b></link></color>."
+        "Recibo de pago por el servicio de #{attributes.fetch(:product)}. Puedes mantener este comprobante como resguardo. Por preguntas, puedes contactarnos a <color rgb='326d92'><link href='mailto:#{company.fetch(:email)}?subject=tutecniCo - Servicio #{id}'><b>#{company.fetch(:email)}</b></link></color>."
       end
 
       def setup_fonts
@@ -50,7 +50,7 @@ module Receipts
         end
 
         move_down 8
-        text "<color rgb='a6a6a6'>Recibo por Servicio #{id}</color>", inline_format: true
+        text "<color rgb='a6a6a6'>Recibo - <strong>Servicio #{id}</strong></color>", inline_format: true
 
         move_down 30
         text message, inline_format: true, size: 12.5, leading: 4
