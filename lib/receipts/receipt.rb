@@ -74,7 +74,7 @@ module Receipts
         text "<color rgb='888888'>#{company.fetch(:address)}</color>", inline_format: true
 
         move_down 20
-        text "<color rgb='888888'>*Comprobante no válido como factura. Si deseas solicitar una Factura 'C', envianos un email a <color rgb='326d92'><link href='mailto:facturas@tutecni.co?subject=tutecniCo - Solicitud de Factura Servicio #{id}'>facturas@tutecni.co</link></color>, incluyendo tu CUIT, Nombre y Condición frente al IVA.</color>", inline_format: true
+        text "<color rgb='888888'>*Comprobante no válido como factura. Si deseas solicitar una Factura 'C', envianos un email a <color rgb='326d92'><link href='mailto:facturas@tutecni.co?subject=tutecniCo - Solicitud de Factura Servicio #{id}'>facturas@tutecni.co</link></color>, incluyendo tu CUIT, Nombre y Condición frente al IVA.</color>", inline_format: true, size: 10
       end
   end
 end
